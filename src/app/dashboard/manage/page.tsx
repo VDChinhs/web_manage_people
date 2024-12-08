@@ -217,7 +217,7 @@ const DailyAttendanceManager = () => {
     setChangedImage(false)
     setFormDataAddPeople({
       name: '',
-      role: 'Vip1',
+      role: 'Lập trình viên phần mềm',
       pictureface: ''
     })
   };
@@ -243,7 +243,7 @@ const DailyAttendanceManager = () => {
     if (formDataAddPeople.name != '' && formDataAddPeople.pictureface != '') {
       setFormDataAddPeople({
         name: "",
-        role: "Vip1",
+        role: "Lập trình viên phần mềm",
         pictureface: ""
       });
       console.log(formDataAddPeople);
@@ -296,6 +296,8 @@ const DailyAttendanceManager = () => {
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
+    console.log(name, value);
+    
     setFormDataAddPeople({ ...formDataAddPeople, [name]: value });
   };
 
@@ -545,7 +547,7 @@ const DailyAttendanceManager = () => {
                   onChange={handleSelectChange}
                 >
                   {positions?.map((position) => (
-                    <option key={position.id} value={position.id}>
+                    <option key={position.id} value={position.title}>
                       {position.title}
                     </option>
                   ))}
@@ -659,7 +661,7 @@ const DailyAttendanceManager = () => {
                   onChange={handleSelectChange}
                 >
                   {positions?.map((position) => (
-                    <option key={position.id} value={position.id}>
+                    <option key={position.id} value={position.title}>
                       {position.title}
                     </option>
                   ))}
