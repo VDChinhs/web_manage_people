@@ -112,7 +112,6 @@ export default function TrackTime() {
 
   const handleDateChangeEnd = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedDateEnd(event.target.value);
-    toastSuccesShow("Phát hiện có người mới ở cổng ");
   };
 
   const convertDateString = (dateString: string) => {    
